@@ -5,19 +5,296 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
     <title>Login</title>
 </head>
+<style>
+    body {
+        background-color: rgb(11, 129, 184);
+    margin: 25px;
+    justify-content: center;
+}
+
+nav {
+    
+    height: 3.5vmax;
+    display: flex;
+    box-shadow: 0 0 10px black;
+    position: sticky;
+    top: 0%;
+    background-color: white;
+}
+
+.left{
+    width: 20%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.left>a{
+    text-decoration: none;
+    color: crimson;
+    font-size: 2vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.mid{
+    width: 60%;
+   
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mid>a{
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    font-size: 1.4vmax;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.mid>a:hover{
+    border: bottom 2px solid crimson;
+    color: crimson;
+}
+.right{
+    
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    /*border: 2px solid rgb(250,248,114);*/
+    
+}
+
+.right{
+    width:10% ;
+   
+}
+
+.right>a{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8Vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home{
+    
+    display: flex;
+    height: 90vh;
+    background-image: linear-gradient(to right, rgb(101, 233, 101),rgb(74, 74, 172));
+}
+
+
+.container{
+    width: 100%;
+    
+    
+}
+
+#rightcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rightcontainer>img{
+
+    filter: drop-shadow(0 0 10px);
+    cursor: pointer;
+    position: sticky;
+    top: 0%;
+    z-index: 10000;
+}
+
+#leftcontainer {
+
+    display: flex;
+    flex-direction: column;
+    padding: 2vmax;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+#leftcontainer >h1{
+
+    font-size: 4vmax;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#leftcontainer >h2{
+    margin-top: -5%;
+    font-size: 2.5vmax;
+    font-family: sans-serif;
+}
+
+#leftcontainer >p{
+    
+    font-size: 1.1vmax;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+#Products>h1{
+    
+    text-align: center;
+    margin: 5vmax auto ;
+    font-size: 2.5vmax;
+    border-bottom: 5px solid crimson;
+    padding: 0.8vmax;
+    width: 30vw;
+}
+
+.productscontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 80vw;
+    margin: auto;
+}
+
+
+
+
+
+
+footer{
+    margin-top: 10vmax;
+    padding: 2vmax;
+    background-color:rgb(0, 0, 0) ;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.leftFooter{
+    width:25% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftFooter > h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.leftFooter>p{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.leftFooter>img{
+    width: 11vmax;
+    margin: 1vmax;
+    cursor: pointer;
+}
+
+.midFooter{
+    width: 50%;
+    text-align: center;
+}
+
+.midFooter>h1{
+    font-size: 3.9vmax;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: crimson;
+}
+
+.midFooter> p{
+    max-width: 70%;
+    margin: 1vmax;
+    margin: 1vmax auto;
+}
+
+
+
+.rightFooter{
+    width: 25%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rightFooter > h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4vmax;
+    text-decoration: underline white;
+   
+}
+
+.rightFooter > a{
+    text-decoration: none;
+    font-size: 1.3vmax;
+    text-transform: none;
+    color: white;
+    margin: 0.5vmax;
+}
+
+.content-section{
+    display: flex;
+    justify-content: center;
+    margin: 5vmax;
+    zoom: 200%;
+}
+</style>
 
 <body>
-    <h1>Login Page</h1>
+    <nav>
+        <div class="left">
+            <a href="#">Login Page</a></div>
+        <div class="mid">
+            <a href="#">Home</a>
+            <a href="#Products">Latest Information</a>
+            <a href="#footer">About </a>
+            <a href="#footer">Contact </a>
+        
+
+        </div>
+        
+          <p> <a href="{{url_for('register')}}">Register</a><br></p>
+
+        </div>
+    
+    </nav>
+    
+    <div class="content-section">
 
     <form method="POST" action="">
         {{form.hidden_tag()  }}
-        {{form.username }}<br>
-        {{form.password }}<br>
-        {{form.submit }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Login</legend>
+            <div class="form-group">
+            {{form.username.label(class="form-control-label") }}
+            {{form.username(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{form.password.label(class="form-control-label") }}
+                {{form.password(class="form-control form-control-lg") }}
+                </div>
+                </fieldset>
+                <div class="form-group">
+                    {{form.submit(class="btn btn-outline-info") }}
+                
+        
+        
+        
     </form>
-    <a href="{{url_for('register')}}">Don't have an account? Sign Up</a>
+    <a href="{{url_for('register')}}">Don't have an account? Sign Up</a></div>
     
 </body>
 </html>
