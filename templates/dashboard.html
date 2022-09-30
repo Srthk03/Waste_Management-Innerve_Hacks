@@ -16,29 +16,48 @@
 <style>
   body{
         background-image: linear-gradient(to right, rgb(101, 233, 101),rgb(74, 74, 172));
-        display: flex;
+        display: grid;
         justify-content: center;
+      
     }
 
     
     h1{
-        width: 10vw; 
-        height: 10vh;
+        width: 20vw; 
+        height: 20vh;
     }
     
   
 </style>
 <body>
-  <h1>Hello! You are logged in.</h1>
-    <a href="{{url_for('logout')}}">Logout</a>
-    <div class="jumbotron">
-        <h1 class="display-4">Welcome!</h1>
-        <p class="lead">This is the dashboard of this website.</p>
-        <hr class="my-4">
-        <p>Please Select if you are a customer or a collector.</p>
-        <a href="{{url_for('citizen')}}">Citizen Page</a><br>
-        <a href="{{url_for('collector')}}">Collector Page</a>
+  <h1>Hello! You are logged in.</h1><br>
+  <h1 style="font-size: 25px;">Choose the Desired Option</h1><br>
+    
 
+  <nav>
+    <button><a class="btn btn-primary" href= "{{url_for('citizen')}}" role="button">Citizen Page</a></button>
+   
+</nav>
+
+  <button><a class="btn btn-dark" href= "{{url_for('collector')}}" role="button">Collector Page</a></button>
+ 
+
+    <p>This will Direct you to the Homepage</p>
+    <button href = "{{url_for('login')}}">Home</button><br>
+    <p>See You Profile</p>
+    <button>Profile</button><br>
+    <p>Change Settings</p>
+    <button>Settings</button><br>
+    <p>Latest Notices</p>
+    <button>Alert</button>
+   
+      <p>       </p>
+      <a href="{{url_for('logout')}}">Logout</a>
+
+    
+    
+    
+    
     
 </body>
 </html>
